@@ -27,6 +27,11 @@ html,body{
 
 body {
   height: 100%;
+  color: red;
+}
+
+a {
+  text-decoration: underline!important;
 }
 
 #wrap {

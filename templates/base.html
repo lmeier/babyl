@@ -10,9 +10,9 @@
         <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=B612|Montserrat:500|Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
-        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
         <link rel="stylesheet" href="{% static "css/bootstrap-lux.min.css" %}" />
-        {% block stylesheet %}{% endblock %}  <!-- HERE -->
+        <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+{% block stylesheet %}{% endblock %}  <!-- HERE -->
       </head>
       <div class="body">
         <body>
