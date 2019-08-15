@@ -27,10 +27,9 @@ html,body{
 
 body {
   height: 100%;
-  color: red;
 }
 
-a {
+a{
   text-decoration: underline!important;
 }
 
@@ -65,7 +64,9 @@ a {
   font-family: "Righteous", cursive;
 }
 .mfont {
-  font-family: "Roboto", sans-serif;
+  /* font-family: "Roboto", sans-serif; */
+  font-family: 'Hepta Slab', serif;
+
 }
 .center {
   margin: auto;
@@ -129,7 +130,8 @@ li:not(:last-child) {
 }
 
 .bodytext {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Hepta Slab', serif;
+  /* font-family: "Roboto", sans-serif; */
   color: black;
   text-align: justify;
 }
