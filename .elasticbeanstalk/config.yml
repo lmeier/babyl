@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: babyl-django-env
+    environment: babyl-work
     group_suffix: null
 environment-defaults:
   babyl-django-env:
@@ -10,7 +10,7 @@ environment-defaults:
     branch: null
     repository: null
 global:
-  application_name: babylproject
+  application_name: babyl
   branch: null
   default_ec2_keyname: aws-eb
   default_platform: Python 3.6
