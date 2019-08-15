@@ -8,13 +8,14 @@
     <br />
   {% endif %}
   <br />
-  <p class="h2text text-center">{{ post.title }}</p>
+  <p class="posth2text text-center">{{ post.title }}</p>
   <div class =text-center>
     <span class="h4text">from </span>
     <a href="{% url 'view_blog' blog_slug=blog.slug  %}"> {{ blog.name }} </a>
   </div>
   <br />
-  <div class="bodytext">
+  <br />
+  <div class="postbodytext">
     {{post.get_post_as_markdown}}
   </div>
   <br />
