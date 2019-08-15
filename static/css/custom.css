@@ -49,9 +49,9 @@ a{
   /* padding: 10px; */
 }
 .h2text {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'EB Garamond', serif;
   color: black;
-  font-size: 1.8rem;
+  font-size: 2rem;
 }
 
 .h3text {
@@ -104,7 +104,8 @@ li:not(:last-child) {
 
 .bodytext {
   font-family: 'Libre Baskerville', serif;
-  color: black;
+  font-size: 22px;
+  color: darkgray;
   text-align: left;
 }
 
