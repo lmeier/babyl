@@ -1,6 +1,6 @@
 branch-defaults:
   master:
-    environment: babyl-work
+    environment: babyl-django-env
     group_suffix: null
 environment-defaults:
   babyl-django-env:

@@ -27,8 +27,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '@lui4d_$9_*c+*+(+0@$0rngm(7n=8n-^!pmg2kp^)a^sw4474'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
-
-ALLOWED_HOSTS = [.localhost,127.0.0.1, http://babyl-django-env.mijbfpttig.us-west-2.elasticbeanstalk.com/, www.babyl.online]
+# 
+ALLOWED_HOSTS = [.localhost,127.0.0.1, http://babyl-django-env.mijbfpttig.us-west-2.elasticbeanstalk.com/, www.babyl.online, babyl-django-env.mijbfpttig.us-west-2.elasticbeanstalk.com]
 # ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 
