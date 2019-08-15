@@ -1,0 +1,151 @@
+/* body {
+  padding-bottom: 70px;
+} */
+/* 
+
+html,body{
+  height: 100%
+}
+
+#holder{
+  min-height: 100%;
+  position:relative;
+}
+
+#body{
+  padding-bottom: 100px;
+  margin-bottom: 50px;    /* height of footer */
+}
+
+/* footer{
+  height: 100px; 
+  width:100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;  */
+} */
+
+body {
+  height: 100%;
+}
+
+#wrap {
+  min-height: 100%;
+}
+
+#main {
+  min-height: 93vh;
+  overflow:auto;
+  padding-bottom:0px; /* this needs to be bigger than footer height*/
+}
+.footer {
+  position: relative;
+  margin-top: -0px; /* negative value of footer height */
+  height: 0px;
+  clear:both;
+  padding-top: 0px;
+} 
+
+
+
+
+.h1text {
+  /* font-family: 'Montserrat', sans-serif; */
+  color: black;
+  font-size: 3.5rem;
+  font-family: "Righteous", cursive;
+  /* font-family: 'Montserrat', sans-serif; */
+}
+.lfont {
+  font-family: "Righteous", cursive;
+}
+.mfont {
+  font-family: "Roboto", sans-serif;
+}
+.center {
+  margin: auto;
+  left: 50%;
+  margin-right: -50%;
+  width: 50%;
+  /* padding: 10px; */
+}
+.h2text {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  font-size: 1.8rem;
+}
+
+.h3text {
+  font-family: "Roboto", sans-serif;
+  /* font-family: 'Montserrat', sans-serif; */
+  color: black;
+  font-size: 1.5rem;
+}
+
+.centerdiv {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+.narrowcenterdiv {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 5%;
+}
+
+
+.page-footer.navbar{
+  /* position: absolut; */
+  top: auto;
+  bottom: 0;
+}
+
+.bottomdiv {
+  top: auto;
+  position: absolute;
+  bottom:0;
+}
+
+.textdiv {
+  max-width: 200px;
+  margin: 500 auto;
+}
+
+li:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.homebodytext {
+  font-size: 1rem;
+  color: darkslategrey;
+  font-family: "Roboto", sans-serif;
+  text-align: justify;
+}
+
+.bodytext {
+  font-family: "Roboto", sans-serif;
+  color: black;
+  text-align: justify;
+}
+
+.dark {
+  color: black;
+}
+.purple {
+  color: purple;
+}
+
+.date a .name {
+  color: brown;
+}
+
+button {
+  color: red;
+}
+
+@media only screen and (min-width: small){
+  .centerdiv{
+    min-width: 500;
+  }
+}

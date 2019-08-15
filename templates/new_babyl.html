@@ -1,0 +1,17 @@
+{% extends 'base.html' %} 
+{% block content %}
+<div class="narrowcenterdiv">
+  <!-- <form action="/your-name/" method="post"> -->
+    <br />
+    <br />
+  <form action="/new-babyl/" method="post">
+    {% csrf_token %}
+    {{ form.as_p}}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <!-- <input type="submit" value="Submit" /> -->
+    <button class="btn btn-outline-secondary text-center" style="text-align: center" type="submit">Submit</button>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+<link
+  href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap"
+  rel="stylesheet"
+/>
+
+{% block content %}
+<div class="centerdiv">
+  <br />
+  <p class="h1text text-center">Babyl.online</p>
+  <div style="font-family:Roboto, sans-serif">
+    <p class="h3text text-center">
+      A online home for your whatever you may be writing
+    </p>
+    <ul class="homebodytext" style="list-style-type:disc;">
+      <li>Publish quickly: set-up takes 30 seconds</li>
+      <li>
+        Share via email newsletter: followers can get a digest of all the Babyls
+        they follow, on the schedule they want
+      </li>
+      <li>Control who reads your content</li>
+      <ul style="list-style-type:disc;">
+        <li>Your babyl won't show up on Google, by default</li>
+        <li>Put a password on your entire blog or individual posts</li>
+      </ul>
+    </ul>
+    <br />
+    <div style="text-align:center">
+      <a href="{% url 'account_signup' %}" class="btn btn-primary mfont"
+        >Get started now</a
+      >
+    </div>
+    <br />
+    <br />
+    <p class="h2text text-center" style="font-size: 2.5rem">Why Babyl</p>
+    <div class="homebodytext">
+      <p>
+        With the internet, there ought to be better communication and more great
+        writing now than ever before--the internet connects us with our friends,
+        families, communities, and over 3 billion people. But instead, the
+        internet often feels just like a place for vanity, headlines, and those
+        making a quick buck.
+      </p>
+      <p>
+        Babyl is designed to encourage authentic writing and sharing. Ordinary
+        social media has proven not to be the place for this. When likes and
+        comments are on every post, sharing becomes inherently competetive. And
+        when there's competetion, lowest common denominator content dominates.
+      </p>
+      <p>
+        With Babyl, you can share your writing worry-free. There is no attention
+        sucking news-feed on Babyl. People only see your writing when they come
+        to your Babyl, or, if you allow subscriptions, in their digest email.
+      </p>
+      <br />
+      <p class="h2text text-center" style="font-size:1.6rem">
+        What type of writing is Babyl good for?
+      </p>
+      <br />
+      <ul class="homebodytext" style="list-style-type:disc;">
+  
+        <li>The story (or stories!) you're writing</li>
+        <li>A travelogue</li>
+        <li>
+            Your diary (this is our favorite!). Have deeply personal, written
+            conversations with the people you're closest to
+        </li>
+        <li>
+          A learning log -- cement that knowledge!
+        </li>
+        <li>
+            Anything that you want to share
+          </li>
+      </ul>
+      <!-- <a href class="text-center" style="text-align: center"> See some examples here.</a> -->
+      <br />
+      <p class="h2text text-center" style="font-size:1.6rem">
+        Why the name Babyl.online?
+      </p>
+      <p>
+        Babylon (get it?!) was one of the world's first great cities, and a home
+        to rich culture, scholarship, and other writing, and so a fitting
+        inspiration for our attempt to revive writing culture online.
+      </p>
+      <p>
+        The word 'babel' also traces its origins to Babylon. In an Old Testament
+        story, the people of Babylon were made to speak different languages by
+        God after disobeying him, resulting in complete confusion. Babyl.online
+        is a home for confused writers--and we think just about everyone is
+        confused in some way (and should be a writer!).
+      </p>
+      <p>
+        Babyl allows for written imperfection and confusion to be put in front a
+        friendly audience. It's in those circumstances that we can best learn,
+        grow, and live.
+      </p>
+      <div style="text-align:center">
+        <a href="{% url 'account_signup' %}" class="btn btn-primary mfont"
+          >Start your Babyl now!</a
+        >
+      </div>
+      <br />
+    </div>
+
+    {% endblock %}
+  </div>
+</div>

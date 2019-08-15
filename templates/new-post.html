@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block title %}Make a new Post{% endblock %}
+
+{% block stylesheet %}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+{% endblock %}
+
+{% block javascript %}
+  <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+  <script>
+    var simplemde = new SimpleMDE({
+      forceSync: true;
+    });
+  </script>
+{% endblock %}
+
+{% block content %}
+<div class="narrowcenterdiv">
+  <br />
+
+  <form method="post">
+    {% csrf_token %}
+    {{ form}}
+    <button style="align-content: center" type="submit" class="btn btn-outline-secondary text-center">Post</button>
+  </form>
+
+</div>
+{% endblock %}

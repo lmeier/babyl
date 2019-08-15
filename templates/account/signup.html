@@ -1,0 +1,38 @@
+{% extends "account/base.html" %}
+
+{% load i18n %}
+
+{% block head_title %}{% trans "Signup" %}{% endblock %}
+{% load account socialaccount %}
+{% block content %}
+<div class="narrowcenterdiv">
+    <br />
+    <h1 style="text-align: center">{% trans "Sign Up" %}</h1>
+    <br />
+    <div style="text-align: center">
+            <a href="{% provider_login_url "google" %}" class="btn btn-outline-secondary" style="text-align: center">Sign in with Google</a>
+            <!-- <a href="{% provider_login_url "google" %}" style="text-align: center">Sign in with Google</a> -->
+            <br />
+            <br />
+    </div>
+    <p style="text-align: center"> or </p>
+    <p class="h4" style="text-align: center"> Register with Babyl.online </p>
+    <br />
+    <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <!-- <div style="text-align: center" -->
+    <div style="text-align: center">
+        <button class="btn h3text  btn-primary mfont text-center" style="text-align: center" type="submit">{% trans "Sign Up" %} &raquo;</button>
+    </div>
+    <!-- </div> -->
+    </form>
+    <br />
+    <br />
+    <p style="text-align:center">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+
+</div>
+{% endblock %}

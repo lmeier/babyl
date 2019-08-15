@@ -1,0 +1,15 @@
+{% extends 'base.html' %} {% load static %} {% block stylesheet %}
+<link rel="stylesheet" href="{% static 'css/accounts.css' %}" />
+{% endblock %} {% block body %}
+<div class="container">
+  <p class="text-center my-4">
+    <a
+      href="{% url 'home' %}"
+      class="text-center lfont my-4"
+      style="font-size: 2.5rem"
+      >babyl.online</a
+    >
+  </p>
+  {% block content %} {% endblock %}
+</div>
+{% endblock %}

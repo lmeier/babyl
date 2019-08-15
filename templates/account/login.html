@@ -1,0 +1,45 @@
+{% extends "account/base.html" %}
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<!-- <meta name="google-signin-client_id" content="YOUR_CLIENT_ID.apps.googleusercontent.com"> -->
+<!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+
+<div class="centerdiv" style="max-width: 300px">
+    {% load i18n %}
+    {% load account socialaccount %}
+
+    {% block head_title %}{% trans "Sign In" %}{% endblock %}
+
+    {% block content %}
+    <br />
+    <h1 class="text-center">{% trans "Sign In" %}</h1>
+    <br />
+    <div style="text-align: center">
+        <a href="{% provider_login_url "google" %}" class="btn btn-outline-secondary" style="text-align: center">Sign in with Google</a>
+        <!-- <a href="{% provider_login_url "google" %}" style="text-align: center">Sign in with Google</a> -->
+        <br />
+        <br />
+        <p class =""> or with your Babyl.online account details. </p>
+        {% include "socialaccount/snippets/login_extra.html" %}
+    </div>
+    <div class="narrowcenterdiv">
+        <form class="login " method="POST" action="{% url 'account_login' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        {% if redirect_field_value %}
+        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+        {% endif %}
+    <div style="text-align: center">
+    <button class="primaryAction btn h3text  btn-primary mfont text-center" type="submit">{% trans "Sign In" %}</button>
+    </div>
+    <br />
+    <br />
+    <a class="button secondaryAction" href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
+    </form>
+    <br />
+    <br />
+    </div>
+    <p class="text-center"> No account yet? <a href="{{ signup_url }}">Sign up</a>  now! </p>
+</div>
+
+
+{% endblock %}

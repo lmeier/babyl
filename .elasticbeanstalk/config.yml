@@ -1,0 +1,19 @@
+branch-defaults:
+  default:
+    environment: null
+    group_suffix: null
+environment-defaults:
+  babylproject-dev:
+    branch: null
+    repository: null
+global:
+  application_name: babylproject
+  branch: null
+  default_platform: Python 3.6
+  default_region: us-west-2
+  instance_profile: null
+  platform_name: null
+  platform_version: null
+  profile: eb-cli
+  repository: null
+  workspace_type: Application

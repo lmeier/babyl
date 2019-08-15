@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block content %}
+<div class="centerdiv">
+  {% if owner %}
+        <a href="#"
+          class="btn btn-sm mfont text-center"
+          >Edit 
+        </a>
+    <br />
+  {% endif %}
+  <br />
+  <p class="h2text text-center">{{ post.title }}</p>
+  <div class =text-center>
+    <span class="h4text">from </span>
+    <a href="{% url 'view_blog' blog_slug=blog.slug  %}"> {{ blog.name }} </a>
+  </div>
+  <br />
+  <div class="bodytext">
+    {{post.get_post_as_markdown}}
+  </div>
+  <br />
+  <br />
+  <a href="{% url 'view_blog' blog_slug=blog.slug  %}" style="text-align:center"> 
+    See more from {{ blog.name }} </a>
+  <br />
+  <br />
+</div>
+{% endblock %}

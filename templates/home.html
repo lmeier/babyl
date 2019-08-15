@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+<link
+  href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap"
+  rel="stylesheet"
+/>
+
+{% block content %}
+<div class="centerdiv">
+  <br />
+  {% if blogs %}
+  <div class="">
+  <span class="h2text" style="text-align: left">Babyls</span> 
+  <div style="text-align:right; float:right;">
+      <a
+        href="{% url 'new_babyl' %}"
+        class="btn  btn-md mfont text-center"
+        >+ New Babyl</a
+      >
+    </div>
+  </div>
+  <br />
+  {% for blog in blogs %}
+  <!-- <p class="text-center"> -->
+  <div class="textdiv">
+    <a href="{% url 'view_blog' blog.slug %}" class="text-center">
+      {{ blog.name }}
+    </a>
+  </div>
+  <br />
+  {% endfor %} {% else %}
+  <div class="text-center">
+    <!-- <p class="h3text text-center">You have no Babyls yet.</p> -->
+    <br />
+    <br />
+    <br />
+    <a
+    href="{% url 'new_babyl' %}"
+    class="btn h3text  btn-primary mfont text-center"
+    >Make your first Babyl</a>
+  </div>
+  {% endif %}
+
+  <br />
+  <br />
+</div>
+{% endblock %}
+
+<p class="h3text text-center">
+  A online home for your whatever you may be writing
+</p>

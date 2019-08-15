@@ -1,0 +1,51 @@
+{% extends 'base.html' %}
+<!-- {% load static %}<!doctype html> -->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>{{ blog_name }}</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link
+      rel="stylesheet"
+      href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"
+    />
+    <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto&display=swap" rel="stylesheet"> -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- <link rel="stylesheet" type="text/css" href='css/custom.css'> -->
+    <style>
+      .center {
+        margin: auto;
+        width: 40%;
+        padding: 10px;
+      }
+      .headingtext {
+        font-family: "Montserrat", sans-serif;
+      }
+      .bodytext {
+        font-family: "Roboto", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center">
+      <h1 class="headingtext">{{ blog_name }} Posts</h1>
+      <div class="bodytext">
+        {% if posts %} {% for post in posts %}
+        {{ post.title }} <br />
+        {% endfor %} {% else %}
+        <p>This blog has no posts</p>
+        {% endif %}
+      </div>
+      <div class="container">
+        <h1>My First Bootstrap Page</h1>
+        <p>This part is inside a .container class.</p>
+        <p>The .container class provides a responsive fixed width container.</p>
+      </div>
+      <p class="text-center">Center aligned text on all viewport sizes.</p>
+    </div>
+  </body>
+</html>

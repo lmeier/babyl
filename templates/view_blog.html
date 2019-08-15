@@ -1,0 +1,49 @@
+{% extends 'base.html' %} {% block content %}
+<div class="centerdiv">
+  <p class="h2text text-center">{{ blog_name }}</p>
+  {% if owner %}
+    {% if blog_description != '' %}
+      <span style="text-align:left"> {{blog_description}}
+    {% else %}
+      <span style="text-align:left">> This Babyl has no description yet. Maybe you should add one!
+    {% endif %}
+        <a href="#"
+          style="float:right;"
+          class="btn btn-sm mfont text-center"
+          >Edit 
+        </a>
+      </span>
+    <br />
+    <br />
+  <div style="text-align:center">
+    <br />
+    <a href="{% url 'new_post' blog_slug %}" class="btn btn-secondary btn-sm mfont text-center">
+      Add a new post
+    </a> 
+  </div>
+  {% else %}
+    {% if blog_description != '' %}
+      <p style="text-align: center"> {{blog_description}} </p>
+    {% endif %}
+  {% endif %}
+  <br />
+  <br />
+  <div class="bodytext">
+    {% if posts %} {% for post in posts %}
+
+    <p style="text-align:left;">
+        <a href="{% url 'view_post' blog_slug=blog.slug  post_slug=post.slug %}" class="text-center">
+        {{ post.title }}
+      <span style="float:right; color:gray">
+        {{ post.created_at }}
+      </span>
+    </p>
+    {% endfor %} {% else %}
+
+    <div style="text-align:center">
+      <p>This babyl has no posts</p>
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}
