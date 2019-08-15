@@ -105,7 +105,7 @@ li:not(:last-child) {
 .homebodytext {
   font-size: 1rem;
   color: darkslategrey;
-  font-family: 'Libre Baskerville', serif;
+  font-family: "Roboto", sans-serif;
   text-align: justify;
 }
 
@@ -119,7 +119,7 @@ li:not(:last-child) {
 
 .postbodytext {
   font-family: 'Libre Baskerville', serif;
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: black;
   text-align: left;
   line-height: 1.6;
