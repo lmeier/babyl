@@ -24,11 +24,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = '@lui4d_$9_*c+*+(+0@$0rngm(7n=8n-^!pmg2kp^)a^sw4474'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+ALLOWED_HOSTS = [.localhost,127.0.0.1, http://babyl-django-env.mijbfpttig.us-west-2.elasticbeanstalk.com/, www.babyl.online]
+# ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 
 if 'RDS_DB_NAME' in os.environ:
@@ -46,9 +47,9 @@ else:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'iotd',
-            'USER': 'iotd',
-            'PASSWORD': 'iotd',
+            'NAME': 'psdb',
+            'USER': '',
+            'PASSWORD': '',
             'HOST': 'localhost',
             'PORT': '5432',
         }
