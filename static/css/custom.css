@@ -98,8 +98,8 @@ li:not(:last-child) {
 .homebodytext {
   font-size: 1rem;
   color: darkslategrey;
-  font-family: "Roboto", sans-serif;
-  text-align: justify;
+  font-family: 'Libre Baskerville', serif;
+  text-align: left;
 }
 
 .bodytext {
