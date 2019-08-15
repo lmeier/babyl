@@ -125,10 +125,10 @@ li:not(:last-child) {
 
 .postbodytext {
   font-family: 'Libre Baskerville', serif;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: black;
   text-align: left;
-  line-height: 1.2;
+  line-height: 1.4;
   margin: 1.5em 20px;
 }
 
