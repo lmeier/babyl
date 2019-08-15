@@ -3,7 +3,7 @@ body {
 }
 
 a{
-  text-decoration: underline!important;
+  /* text-decoration: underline!important; */
 }
 
 #wrap {
@@ -49,6 +49,14 @@ a{
   /* padding: 10px; */
 }
 
+blockquote{
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 30px;
+  padding: 0.5em 10px;
+  quotes: "\201C""\201D""\2018""\2019";
+}
+
 .h2text {
   font-family: "Roboto", sans-serif;
   color: black;
@@ -56,7 +64,7 @@ a{
 }
 
 .posth2text {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'EB Garamond', serif;
   color: black;
   font-size: 2.5rem;
 }
@@ -123,6 +131,7 @@ li:not(:last-child) {
   color: black;
   text-align: left;
   line-height: 1.6;
+  margin: 1.5em 20px;
 }
 
 .dark {
